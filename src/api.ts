@@ -17,7 +17,11 @@ app.get('/', (req, res) => {
 const api = express.Router();
 
 api.get('/hello', (req, res) => {
-  res.status(200).send({ message: 'hello world 2' });
+  res.status(200).send({ message: 'hello world via GET' });
+});
+
+api.post('/hello', (req, res) => {
+  res.status(200).send({ message: 'hello world via POST' });
 });
 
 // Version the api
